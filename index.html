@@ -1,152 +1,191 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anderson Silva | Portfólio</title>
+  <title>Anderson Silva | Desenvolvedor Java Back-end</title>
+  <meta name="description" content="Desenvolvedor Java Back-end em Curitiba/PR. APIs REST com Spring Boot, PostgreSQL e interfaces em Angular. Disponível para CLT, estágio e projetos freelance.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anderson Silva | Desenvolvedor Java Back-end">
+  <meta property="og:description" content="APIs REST com Spring Boot, PostgreSQL e Angular. Disponível para CLT, estágio e freelance.">
+  <meta property="og:image" content="img/perfil.jpeg">
+  <meta property="og:url" content="https://andersonsilva193.github.io/Portifolio/">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" href="img/perfil.jpeg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="hero">
-    <nav>
-      <h1>Anderson Silva</h1>
-      <button id="themeBtn"><img src="img/dark.png" alt="Lua" width="25" height="25"></button>
+  <header class="topbar">
+    <nav class="container">
+      <a class="brand" href="#inicio">Anderson Silva</a>
+      <ul class="menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button id="themeBtn" type="button" aria-label="Alternar tema claro/escuro">
+        <img src="img/dark.png" alt="" width="24" height="24">
+      </button>
     </nav>
-
-    <div class="hero-content">
-      <img src="img/perfil.jpeg" alt="Foto de perfil" class="avatar">
-      <div>
-        <h2>Desenvolvedor Java Full Stack</h2>
-        <p>Estudante de Análise e Desenvolvimento de Sistemas, construindo APIs e sistemas robustos. <br> Curitiba, PR.</p>
-
-        <div class="buttons">
-          <a href="#projetos" class="btn">Projetos</a>
-          <a href="https://github.com/AndersonSilva193" class="btn">GitHub</a>
-        </div>
-      </div>
-    </div>
   </header>
 
   <main>
-    <section id="sobre">
-      <h2>Sobre mim</h2>
-      <p>
-        Estudante de Análise e Desenvolvimento de Sistemas, construindo minha carreira na área de desenvolvimento de software, com foco principalmente em back-end e desenvolvimento de aplicações utilizando Java. Gosto de transformar problemas reais em código limpo, testável e escalável — do banco de dados ao deploy.
-      </p>
-    </section>
-
-    <section id="projetos">
-      <h2>Projetos Recentes</h2>
-
-      <div class="grid">
-
-        <article class="card">
-          <img src="img/agendabarberoff.jpeg" alt="Clone do Spotify">
-          <div class="card-body">
-            <h3>Barber Agenda</h3>
-            <p>Aplicação full stack para gerenciamento de horários de barbearia.</p>
-            <span>Java • Spring Boot • Angular</span>
-            <div class="links">
-              <a href="https://barberagendaonline.com">Link</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="img/voltride.jpeg" alt="Volti Ride">
-          <div class="card-body">
-            <h3>Volti Ride</h3>
-            <p>Landing page para venda de biciletas elétricas.</p>
-            <span>Angular • TypeScript</span>
-            <div class="links">
-              <a href="https://voltride1.vercel.app">Link</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="img/estoque.png" alt="Sistema de estoque">
-          <div class="card-body">
-            <h3>Sistema de Estoque</h3>
-            <p>CRUD com Python e SQLite.</p>
-            <span>Python • SQL • SQLite</span>
-            <div class="links">
-              <a href="https://github.com/AndersonSilva193/estoque-CRUD-Python">GitHub</a>
-              <a href="https://youtube.com/shorts/7xtHRYMPOgU?feature=share">Vídeo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="img/JavaAPI.jpg" alt="Agendador de Horários">
-          <div class="card-body">
-            <h3>Agendador de Horários Java + Spring</h3>
-            <p>API para gerenciamento de horários (barbearia) com Java e Spring Boot.</p>
-            <span>Java • Spring Boot • REST API</span>
-            <div class="links">
-              <a href="https://github.com/AndersonSilva193/agendador-horarios-API">GitHub</a>
-              <a href="#">Vídeo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="img/nfe.png" alt="Leitor de NF-e">
-          <div class="card-body">
-            <h3>Leitor de NF-e</h3>
-            <p>Converte XML em JSON para automação.</p>
-            <span>Python • XML • JSON</span>
-            <div class="links">
-              <a href="https://github.com/AndersonSilva193/LeitorNF-e">GitHub</a>
-              <a href="https://youtu.be/lmvV2jWc2Dg">Vídeo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="img/MySpotify.jpg" alt="Clone do Spotify">
-          <div class="card-body">
-            <h3>Clone do Spotify</h3>
-            <p>Implementação de uma versão simplificada do Spotify.</p>
-            <span>JavaScript • HTML • CSS</span>
-            <div class="links">
-              <a href="https://github.com/AndersonSilva193/MySpotfy">GitHub</a>
-              <a href="https://andersonsilva193.github.io/MySpotfy/">Link</a>
-            </div>
-          </div>
-        </article>
-
+    <section id="inicio" class="hero container">
+      <img src="img/perfil.jpeg" alt="Foto de Anderson Silva" class="avatar" width="160" height="160">
+      <div class="hero-text">
+        <h1>Desenvolvedor Java Back-end</h1>
+        <p class="lead">
+          Construo APIs REST com <strong>Spring Boot</strong> e <strong>PostgreSQL</strong> e entrego sistemas completos com interface em Angular. Também crio sistemas e landing pages para pequenos negócios.
+        </p>
+        <div class="buttons">
+          <a href="https://wa.me/5541984018011?text=Ol%C3%A1%20Anderson%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+             class="btn btn-primary" target="_blank" rel="noopener">Fale comigo no WhatsApp</a>
+          <a href="Anderson_Silva_CV_Java_Backend.pdf" class="btn btn-outline" download>Baixar currículo</a>
+          <a href="https://github.com/AndersonSilva193" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
     </section>
 
-
-    <section id="tecnologias">
-      <h2>Tecnologias</h2>
-      <ul class="tags">
-        <li>Java</li>
-        <li>Spring Boot</li>
-        <li>Python</li>
-        <li>PostgreSQL</li>
-        <li>Angular</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>Docker</li>
-        <li>Insomnia</li>
-      </ul>
+    <section id="sobre" class="container">
+      <h2>Sobre mim</h2>
+      <div class="about">
+        <p>
+          Estudante de Análise e Desenvolvimento de Sistemas, focado em back-end com Java. Gosto de transformar problemas reais em código limpo e organizado, do banco de dados ao deploy. Já coloquei projetos no ar para uso real e busco minha primeira oportunidade na área.
+        </p>
+        <ul class="facts">
+          <li><strong>Formação</strong> ADS, Estácio (desde jan/2025)</li>
+          <li><strong>Experiência</strong> Suporte bilíngue, Concentrix (2024–2025)</li>
+          <li><strong>Idiomas</strong> Inglês em ambiente profissional</li>
+          <li><strong>Local</strong> Curitiba, PR</li>
+        </ul>
+      </div>
     </section>
 
-    <section id="contato">
-      <h2>Contato</h2>
-      <p>Curitiba • PR</p>
-      <a href="https://www.linkedin.com/in/anderson-silva-81715a2b3/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/AndersonSilva193" target="_blank">GitHub</a>
-      <p>Email: caffee193@gmail.com</p>
+    <section id="projetos" class="container">
+      <h2>Projetos em produção</h2>
+      <p class="section-sub">Sistemas no ar, feitos para uso real.</p>
+
+      <div class="grid grid-featured">
+        <article class="card">
+          <img src="img/agendabarberoff.jpeg" alt="Tela do Barber Agenda" loading="lazy">
+          <div class="card-body">
+            <h3>Barber Agenda</h3>
+            <p>Aplicação full stack para gerenciamento de horários de barbearia, publicada em domínio próprio e executada em container Docker.</p>
+            <p class="tech">Java • Spring Boot • Angular • Docker</p>
+            <div class="links">
+              <a href="https://barberagendaonline.com" target="_blank" rel="noopener">Ver online</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/voltride.jpeg" alt="Landing page Volt Ride" loading="lazy">
+          <div class="card-body">
+            <h3>Volt Ride</h3>
+            <p>Landing page para venda de bicicletas elétricas, com foco em apresentação do produto e conversão.</p>
+            <p class="tech">Angular • TypeScript</p>
+            <div class="links">
+              <a href="https://voltride1.vercel.app" target="_blank" rel="noopener">Ver online</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h2 class="second">Projetos de estudo</h2>
+      <p class="section-sub">Código aberto no GitHub, para praticar back-end, automação e front-end.</p>
+
+      <div class="grid">
+        <article class="card">
+          <img src="img/JavaAPI.jpg" alt="API de agendamento de horários" loading="lazy">
+          <div class="card-body">
+            <h3>API de Agendamento</h3>
+            <p>API REST para gerenciamento de horários de barbearia, com POO e operações CRUD.</p>
+            <p class="tech">Java • Spring Boot • REST API</p>
+            <div class="links">
+              <a href="https://github.com/AndersonSilva193/agendador-horarios-API" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/nfe.png" alt="Leitor de NF-e" loading="lazy">
+          <div class="card-body">
+            <h3>Leitor de NF-e</h3>
+            <p>Lê XML de notas fiscais e converte para JSON, organizando os dados para automação.</p>
+            <p class="tech">Python • XML • JSON</p>
+            <div class="links">
+              <a href="https://github.com/AndersonSilva193/LeitorNF-e" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://youtu.be/lmvV2jWc2Dg" target="_blank" rel="noopener">Vídeo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/estoque.png" alt="Sistema de controle de estoque" loading="lazy">
+          <div class="card-body">
+            <h3>Controle de Estoque</h3>
+            <p>CRUD completo de estoque: cadastro, consulta, atualização e exclusão.</p>
+            <p class="tech">Python • SQL • SQLite</p>
+            <div class="links">
+              <a href="https://github.com/AndersonSilva193/estoque-CRUD-Python" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://youtube.com/shorts/7xtHRYMPOgU?feature=share" target="_blank" rel="noopener">Vídeo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/MySpotify.jpg" alt="Clone do Spotify" loading="lazy">
+          <div class="card-body">
+            <h3>Clone do Spotify</h3>
+            <p>Versão simplificada do Spotify para praticar front-end.</p>
+            <p class="tech">JavaScript • HTML • CSS</p>
+            <div class="links">
+              <a href="https://github.com/AndersonSilva193/MySpotfy" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://andersonsilva193.github.io/MySpotfy/" target="_blank" rel="noopener">Ver online</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="tecnologias" class="container">
+      <h2>Tecnologias</h2>
+      <div class="stack">
+        <div>
+          <h3>Back-end</h3>
+          <ul class="tags"><li>Java</li><li>Spring Boot</li><li>APIs REST</li><li>POO</li><li>Python</li></ul>
+        </div>
+        <div>
+          <h3>Banco de dados</h3>
+          <ul class="tags"><li>PostgreSQL</li><li>SQL</li><li>SQLite</li></ul>
+        </div>
+        <div>
+          <h3>Front-end</h3>
+          <ul class="tags"><li>Angular</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+        </div>
+        <div>
+          <h3>Ferramentas</h3>
+          <ul class="tags"><li>Git</li><li>GitHub</li><li>Docker</li><li>Insomnia</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="container">
+      <h2>Vamos conversar</h2>
+      <p class="section-sub">Aberto a propostas de trabalho, e a projetos freelance (sistemas, APIs e landing pages).</p>
+      <div class="contact">
+        <a href="https://wa.me/5541984018011" target="_blank" rel="noopener"><strong>WhatsApp</strong><span>+55 41 98401-8011</span></a>
+        <a href="mailto:caffee193@gmail.com"><strong>E-mail</strong><span>caffee193@gmail.com</span></a>
+        <a href="https://www.linkedin.com/in/anderson-silva-81715a2b3/" target="_blank" rel="noopener"><strong>LinkedIn</strong><span>anderson-silva</span></a>
+        <a href="https://github.com/AndersonSilva193" target="_blank" rel="noopener"><strong>GitHub</strong><span>AndersonSilva193</span></a>
+      </div>
     </section>
   </main>
+
+  <footer class="container footer">
+    <p>© 2026 Anderson Silva • Curitiba, PR</p>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
