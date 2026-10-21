@@ -212,6 +212,18 @@ h2.second{margin-top:56px}
 }
 
 .grid-featured{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.grid-featured:has(> :only-child){grid-template-columns:minmax(0,560px)}
+
+/* Destaque de sites */
+.highlight{
+  margin-top:72px;
+  padding:72px 0 40px;
+  background:color-mix(in srgb,var(--accent) 6%,var(--bg));
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.highlight-cta{margin:28px 0 0}
 
 .card{
   display:flex;
