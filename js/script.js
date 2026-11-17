@@ -16,3 +16,28 @@ btn.addEventListener('click', () => {
   applyTheme(light);
   try { localStorage.setItem('theme', light ? 'light' : 'dark'); } catch (e) {}
 });
+
+// Menu de seções no celular
+const menuBtn = document.getElementById('menuBtn');
+const siteMenu = document.getElementById('siteMenu');
+
+function setMenu(open) {
+  siteMenu.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', String(open));
+  menuBtn.setAttribute('aria-label', open ? 'Fechar menu de seções' : 'Abrir menu de seções');
+}
+
+menuBtn.addEventListener('click', () => {
+  setMenu(siteMenu.classList.contains('open') ? false : true);
+});
+
+siteMenu.addEventListener('click', (e) => {
+  if (e.target.closest('a')) setMenu(false);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && siteMenu.classList.contains('open')) {
+    setMenu(false);
+    menuBtn.focus();
+  }
+});

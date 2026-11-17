@@ -110,6 +110,34 @@ h2.second{margin-top:56px}
 
 #themeBtn:hover{border-color:var(--accent)}
 
+/* Botão de menu mobile */
+.menu-btn{
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+  width:40px;
+  height:40px;
+  padding:0;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:var(--card);
+  cursor:pointer;
+}
+
+.menu-btn span{
+  display:block;
+  width:18px;
+  height:2px;
+  border-radius:1px;
+  background:var(--text);
+  transition:transform .15s,opacity .15s;
+}
+
+.menu-btn[aria-expanded="true"] span:first-child{transform:translateY(3.5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+
 /* Hero */
 .hero{
   display:flex;
@@ -346,7 +374,29 @@ h2.second{margin-top:56px}
 }
 
 @media (max-width:720px){
-  .menu{display:none}
+  .menu{
+    display:none;
+    position:absolute;
+    top:60px;
+    left:0;
+    right:0;
+    flex-direction:column;
+    gap:0;
+    margin:0;
+    padding:8px 0;
+    background:var(--bg);
+    border-bottom:1px solid var(--border);
+    box-shadow:0 12px 24px rgb(0 0 0 / .25);
+  }
+  .menu.open{display:flex}
+  .menu li{margin:0}
+  .menu a{
+    display:block;
+    padding:12px 24px;
+    font-weight:600;
+  }
+  .menu a:hover{background:color-mix(in srgb,var(--accent) 10%,transparent)}
+  .menu-btn{display:flex}
   #themeBtn{margin-left:auto}
   .hero{flex-direction:column;text-align:center;gap:24px}
   .hero .buttons{justify-content:center}
