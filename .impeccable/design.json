@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T00:33:59+00:00",
+  "title": "Design System: Anderson Silva",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Press Ink",
+        "canonical": "#0e0e10",
+        "tonalRamp": [
+          "#0e0e10",
+          "#1c1c20",
+          "#2a2a2e",
+          "#45454b",
+          "#6a6a70",
+          "#9a9aa0",
+          "#c9c9cd",
+          "#ededee"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Gallery Paper",
+        "canonical": "#f8f8f7",
+        "tonalRamp": [
+          "#1f1f1d",
+          "#3a3a37",
+          "#5c5c58",
+          "#82827d",
+          "#a9a9a4",
+          "#cfcfcb",
+          "#ececea",
+          "#f8f8f7"
+        ]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Wash Stone",
+        "canonical": "#efeeeb",
+        "tonalRamp": [
+          "#211f1b",
+          "#3d3b36",
+          "#5f5c55",
+          "#86827a",
+          "#ada9a1",
+          "#d3d0ca",
+          "#efeeeb",
+          "#f8f7f5"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#55555b",
+        "tonalRamp": [
+          "#1a1a1d",
+          "#2d2d31",
+          "#404045",
+          "#55555b",
+          "#77777d",
+          "#9d9da2",
+          "#c6c6c9",
+          "#ececed"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#e2e2df",
+        "tonalRamp": [
+          "#22221f",
+          "#3e3e3a",
+          "#5f5f5a",
+          "#85857f",
+          "#aeaea9",
+          "#d9d9d5",
+          "#e2e2df",
+          "#f4f4f2"
+        ]
+      },
+      "bezel": {
+        "role": "neutral",
+        "displayName": "Bezel Black",
+        "canonical": "#111113",
+        "tonalRamp": [
+          "#111113",
+          "#1d1d20",
+          "#26262a",
+          "#3a3a3f",
+          "#5d5d63",
+          "#8d8d93",
+          "#c3c3c7",
+          "#ececee"
+        ]
+      },
+      "chapter-ink-soft": {
+        "role": "neutral",
+        "displayName": "Chapter Graphite",
+        "canonical": "#4e4c47",
+        "tonalRamp": [
+          "#1b1a18",
+          "#2e2d2a",
+          "#4e4c47",
+          "#6b6963",
+          "#8f8c85",
+          "#b4b1aa",
+          "#d6d4cf",
+          "#f1f0ed"
+        ]
+      },
+      "night-ink": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "canonical": "#f4f2ee",
+        "tonalRamp": [
+          "#22201c",
+          "#3e3b35",
+          "#615d55",
+          "#88837a",
+          "#b0aba1",
+          "#d4d0c8",
+          "#e9e6e0",
+          "#f4f2ee"
+        ]
+      },
+      "night-ink-soft": {
+        "role": "neutral",
+        "displayName": "Night Ink Soft",
+        "canonical": "#b9b4ab",
+        "tonalRamp": [
+          "#24221e",
+          "#403d37",
+          "#635f57",
+          "#8a857c",
+          "#b9b4ab",
+          "#cfcbc3",
+          "#e3e0da",
+          "#f4f2ee"
+        ]
+      },
+      "live-signal": {
+        "role": "signal",
+        "displayName": "Live Green",
+        "canonical": "#3ddc84",
+        "tonalRamp": [
+          "#06331b",
+          "#0b5a30",
+          "#108646",
+          "#1bb15e",
+          "#3ddc84",
+          "#79e8a9",
+          "#b4f2cd",
+          "#e6fbef"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; phones use clamp(2.45rem, 11.2vw, 3.4rem) at 1.02."
+      },
+      "giant": {
+        "displayName": "Giant",
+        "purpose": "Decorative project name behind each chapter screen, aria-hidden, coloured by the site's brand colour, --fit tuned per name."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles inside a masked reveal line."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Chapter project names."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Paragraph under a section headline, Graphite, max 60ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading text, 56 to 72ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, link text, phone names."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hero-screen",
+        "value": "0 34px 60px -26px rgb(20 14 16 / .42), 0 12px 24px -14px rgb(20 14 16 / .28)",
+        "purpose": "Pinned hero screen at rest; animates to none at full bleed."
+      },
+      {
+        "name": "chapter-screen",
+        "value": "0 40px 70px -30px rgb(0 0 0 / .5), 0 14px 28px -16px rgb(0 0 0 / .35)",
+        "purpose": "Screens in light chapters."
+      },
+      {
+        "name": "chapter-screen-dark",
+        "value": "0 40px 80px -30px rgb(0 0 0 / .9), 0 0 0 1px rgb(255 255 255 / .08)",
+        "purpose": "Screens on dark chapter grounds."
+      },
+      {
+        "name": "panel-screen",
+        "value": "0 40px 70px -32px rgb(0 0 0 / .45), 0 14px 24px -16px rgb(0 0 0 / .25)",
+        "purpose": "Systems demo screen."
+      },
+      {
+        "name": "phone",
+        "value": "0 30px 50px -28px rgb(0 0 0 / .55), 0 10px 18px -12px rgb(0 0 0 / .3)",
+        "purpose": "Lineup phone at rest."
+      },
+      {
+        "name": "phone-hover",
+        "value": "0 44px 60px -30px rgb(0 0 0 / .6), 0 14px 22px -14px rgb(0 0 0 / .3)",
+        "purpose": "Lineup phone lifted."
+      },
+      {
+        "name": "pill",
+        "value": "0 1px 2px rgb(0 0 0 / .12)",
+        "purpose": "Primary pill at rest."
+      },
+      {
+        "name": "pill-hover",
+        "value": "0 8px 20px -8px rgb(0 0 0 / .45)",
+        "purpose": "Primary pill on hover."
+      },
+      {
+        "name": "floating-chip",
+        "value": "0 10px 30px -12px rgb(0 0 0 / .35)",
+        "purpose": "Hero tag."
+      },
+      {
+        "name": "toast",
+        "value": "0 18px 40px -16px rgb(0 0 0 / .5)",
+        "purpose": "Toast."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "The single easing for every CSS transition."
+      },
+      {
+        "name": "press",
+        "value": "transform 150ms to scale(.97)",
+        "purpose": "Press feedback on pills and ghost buttons."
+      },
+      {
+        "name": "hero-signature",
+        "value": "pin +=230% (phones +=170%), scrub 0.6",
+        "purpose": "The one pinned scene per page: screen grows to full bleed while the site's frames play to 80%."
+      },
+      {
+        "name": "chapter-scrub",
+        "value": "scrub true, top 85% to bottom 15%",
+        "purpose": "Each chapter screen plays its own frame sequence as it passes; giant name drifts yPercent 8 to -8."
+      },
+      {
+        "name": "title-reveal",
+        "value": "yPercent 104 to 0, 0.9s expo.out, once at top 86%",
+        "purpose": "Masked section headline reveal."
+      },
+      {
+        "name": "lineup-stagger",
+        "value": "y 70 to 0 with opacity, 0.9s expo.out, stagger 0.07",
+        "purpose": "Phone lineup entrance."
+      },
+      {
+        "name": "toast",
+        "value": "translateY 20px to 0 over 450ms; dismiss after 2600ms",
+        "purpose": "E-mail copy confirmation."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "no scenes, no canvas, transitions 0.01ms",
+        "purpose": "Static posters for prefers-reduced-motion and Save-Data."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "767px"
+      },
+      {
+        "name": "desktop",
+        "value": "768px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Pill",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one filled action: WhatsApp.",
+      "html": "<a class=\"ds-pill\" href=\"#\"><svg class=\"ds-ico\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/></svg><span>Falar no WhatsApp</span></a>",
+      "css": ".ds-pill{display:inline-flex;align-items:center;gap:.55em;padding:.78em 1.35em;border-radius:999px;background:var(--ink,#0e0e10);color:#fff;font-family:Geist,ui-sans-serif,system-ui,sans-serif;font-weight:600;font-size:1rem;line-height:1;text-decoration:none;box-shadow:0 1px 2px rgb(0 0 0 / .12);transition:transform .15s cubic-bezier(.16,1,.3,1),background-color .2s,box-shadow .25s cubic-bezier(.16,1,.3,1)}.ds-pill:hover{background:#2a2a2e;box-shadow:0 8px 20px -8px rgb(0 0 0 / .45)}.ds-pill:active{transform:scale(.97)}.ds-pill:focus-visible{outline:2px solid #0e0e10;outline-offset:4px}.ds-ico{width:1.15em;height:1.15em;flex:none}"
+    },
+    {
+      "name": "Ghost Pill",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action (copy e-mail); inverts on hover and when done.",
+      "html": "<button class=\"ds-ghost\" type=\"button\"><span>caffee193@gmail.com</span></button>",
+      "css": ".ds-ghost{display:inline-flex;align-items:center;gap:.55em;padding:1em 1.5em;border-radius:999px;border:1px solid currentColor;background:transparent;color:var(--ink,#0e0e10);font-family:Geist,ui-sans-serif,system-ui,sans-serif;font-size:1.05rem;font-weight:500;line-height:1;cursor:pointer;transition:transform .15s cubic-bezier(.16,1,.3,1),background-color .2s,color .2s}.ds-ghost:hover{background:var(--ink,#0e0e10);color:var(--bg,#f8f8f7)}.ds-ghost:active{transform:scale(.97)}.ds-ghost:focus-visible{outline:2px solid currentColor;outline-offset:4px}"
+    },
+    {
+      "name": "Text Link with Chevron",
+      "kind": "custom",
+      "refersTo": "link-more",
+      "description": "Every non-primary link: soft underline and a CSS chevron that nudges.",
+      "html": "<a class=\"ds-more\" href=\"#\">Visitar o site<span class=\"ds-chev\" aria-hidden=\"true\"></span></a>",
+      "css": ".ds-more{display:inline-flex;align-items:baseline;color:var(--ink,#0e0e10);font-family:Geist,ui-sans-serif,system-ui,sans-serif;font-weight:600;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:.28em;text-decoration-color:color-mix(in srgb,currentColor 35%,transparent);transition:text-decoration-color .2s}.ds-more:hover{text-decoration-color:currentColor}.ds-chev{display:inline-block;width:.42em;height:.42em;margin-left:.42em;border-top:.12em solid currentColor;border-right:.12em solid currentColor;transform:translateY(-.08em) rotate(45deg);transition:transform .25s cubic-bezier(.16,1,.3,1)}.ds-more:hover .ds-chev{transform:translate(.18em,-.08em) rotate(45deg)}.ds-more:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:6px}"
+    },
+    {
+      "name": "Bar",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Fixed thin bar: name left, centred links with wipe underline, pill right; frosted once scrolled.",
+      "html": "<nav class=\"ds-bar\"><a class=\"ds-brand\" href=\"#\">Anderson Silva</a><ul class=\"ds-links\"><li><a href=\"#\" class=\"is-current\">Sites</a></li><li><a href=\"#\">Sistemas</a></li><li><a href=\"#\">Contato</a></li></ul><a class=\"ds-bar-pill\" href=\"#\">Falar no WhatsApp</a></nav>",
+      "css": ".ds-bar{height:62px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 24px;background:color-mix(in srgb,#f8f8f7 84%,transparent);backdrop-filter:saturate(1.6) blur(18px);box-shadow:0 1px 0 rgb(0 0 0 / .06);font-family:Geist,ui-sans-serif,system-ui,sans-serif;color:#0e0e10}.ds-brand{font-weight:700;font-size:1.65rem;letter-spacing:-.025em;line-height:1;color:inherit;text-decoration:none}.ds-links{display:flex;gap:40px;list-style:none;margin:0;padding:0}.ds-links a{position:relative;padding:6px 0;font-size:1.05rem;font-weight:500;color:inherit;text-decoration:none}.ds-links a::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.16,1,.3,1)}.ds-links a:hover::after,.ds-links a.is-current::after{transform:scaleX(1);transform-origin:left}.ds-links a:focus-visible{outline:2px solid currentColor;outline-offset:4px}.ds-bar-pill{padding:.72em 1.2em;border-radius:999px;background:#0e0e10;color:#fff;font-weight:600;font-size:.95rem;line-height:1;text-decoration:none;transition:transform .15s cubic-bezier(.16,1,.3,1)}.ds-bar-pill:active{transform:scale(.97)}"
+    },
+    {
+      "name": "Screen",
+      "kind": "card",
+      "refersTo": "screen",
+      "description": "Signature frame for a real site capture: rounded, inset dark bezel, pooled shadow; poster under a scroll-driven canvas.",
+      "html": "<div class=\"ds-screen\"><div class=\"ds-screen-poster\"></div></div>",
+      "css": ".ds-screen{position:relative;overflow:hidden;width:520px;max-width:100%;aspect-ratio:1440/700;border-radius:22px;background:#efeeeb;isolation:isolate;box-shadow:0 40px 70px -30px rgb(0 0 0 / .5),0 14px 28px -16px rgb(0 0 0 / .35)}.ds-screen::after{content:\"\";position:absolute;inset:0;border-radius:inherit;border:9px solid #111113;pointer-events:none}.ds-screen-poster{position:absolute;inset:0;background:#f0ece9}"
+    },
+    {
+      "name": "Project Chapter",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Band on the site's own ground, giant brand-coloured name behind the screen, copy below.",
+      "html": "<section class=\"ds-chapter\"><p class=\"ds-giant\" aria-hidden=\"true\">AgendaBarber</p><div class=\"ds-ch-screen\"></div><div class=\"ds-ch-text\"><h3>AgendaBarber</h3><p>O barbeiro manda um link e o cliente marca sozinho.</p><p class=\"ds-spec\">Uso real. Java com Spring Boot, Angular e Docker.</p></div></section>",
+      "css": ".ds-chapter{background:#120e0b;color:#f4f2ee;padding:56px 24px;overflow:hidden;font-family:Geist,ui-sans-serif,system-ui,sans-serif}.ds-giant{margin:0;font-size:min(9rem,11vw);font-weight:800;letter-spacing:-.04em;line-height:.86;text-align:center;white-space:nowrap;color:#c19055}.ds-ch-screen{position:relative;width:88%;margin:-22px auto 0;aspect-ratio:1440/700;border-radius:22px;background:#2a211a;border:9px solid #26262a;box-shadow:0 40px 80px -30px rgb(0 0 0 / .9),0 0 0 1px rgb(255 255 255 / .08)}.ds-ch-text{width:88%;margin:32px auto 0}.ds-ch-text h3{margin:0;font-size:1.75rem;font-weight:700;letter-spacing:-.025em}.ds-ch-text p{margin:.4em 0 0;color:#b9b4ab;max-width:56ch}.ds-ch-text .ds-spec{color:#f4f2ee;font-weight:500}"
+    },
+    {
+      "name": "Phone",
+      "kind": "card",
+      "refersTo": "",
+      "description": "Lineup device frame for a real mobile capture; lifts on hover, settles on press.",
+      "html": "<a class=\"ds-phone\" href=\"#\"><span class=\"ds-glass\"></span><span class=\"ds-phone-name\">Açaí do GQ</span></a>",
+      "css": ".ds-phone{display:inline-block;width:160px;text-align:center;color:#0e0e10;text-decoration:none;font-family:Geist,ui-sans-serif,system-ui,sans-serif}.ds-glass{display:block;aspect-ratio:585/1186;border-radius:28px;border:6px solid #111113;background:#000;box-shadow:0 30px 50px -28px rgb(0 0 0 / .55),0 10px 18px -12px rgb(0 0 0 / .3);transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s cubic-bezier(.16,1,.3,1)}.ds-phone:hover .ds-glass{transform:translateY(-10px);box-shadow:0 44px 60px -30px rgb(0 0 0 / .6),0 14px 22px -14px rgb(0 0 0 / .3)}.ds-phone:active .ds-glass{transform:translateY(-4px) scale(.985)}.ds-phone-name{display:inline-block;margin-top:16px;font-weight:600;font-size:1.05rem}.ds-phone:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:6px}"
+    },
+    {
+      "name": "Repo Row",
+      "kind": "custom",
+      "refersTo": "repo-row",
+      "description": "Study repo row between hairline rules; fills and widens on hover.",
+      "html": "<ul class=\"ds-repos\"><li><a href=\"#\"><span class=\"ds-rn\">API de agendamento</span><span class=\"ds-rd\">API REST de horários de barbearia.</span><span class=\"ds-rs\">Java · Spring Boot</span><span class=\"ds-rc\" aria-hidden=\"true\"></span></a></li></ul>",
+      "css": ".ds-repos{list-style:none;margin:0;padding:0;border-top:1px solid #d9d8d3;border-bottom:1px solid #d9d8d3;background:#efeeeb;font-family:Geist,ui-sans-serif,system-ui,sans-serif}.ds-repos a{display:grid;grid-template-columns:minmax(140px,1.1fr) 2fr auto 24px;align-items:baseline;gap:8px 28px;padding:20px 8px;border-radius:10px;color:#0e0e10;text-decoration:none;transition:background-color .2s,padding .3s cubic-bezier(.16,1,.3,1)}.ds-repos a:hover{background:rgb(255 255 255 / .7);padding-left:16px;padding-right:16px}.ds-rn{font-weight:650;font-size:1.1rem}.ds-rd{color:#55555b}.ds-rs{font-size:.9rem;color:#55555b;white-space:nowrap}.ds-rc{justify-self:end;width:.42em;height:.42em;border-top:.12em solid currentColor;border-right:.12em solid currentColor;transform:rotate(45deg);transition:transform .25s cubic-bezier(.16,1,.3,1)}.ds-repos a:hover .ds-rc{transform:translateX(.18em) rotate(45deg)}.ds-repos a:focus-visible{outline:2px solid currentColor;outline-offset:4px}"
+    },
+    {
+      "name": "Toast",
+      "kind": "custom",
+      "refersTo": "toast",
+      "description": "Ink pill status message confirming the e-mail copy.",
+      "html": "<div class=\"ds-toast\" role=\"status\">E-mail copiado. É só colar no seu app de e-mail.</div>",
+      "css": ".ds-toast{display:inline-block;padding:12px 20px;border-radius:999px;background:#0e0e10;color:#fff;font-family:Geist,ui-sans-serif,system-ui,sans-serif;font-weight:500;font-size:.98rem;box-shadow:0 18px 40px -16px rgb(0 0 0 / .5)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Launch Stage",
+    "overview": "The page is a quiet stage and every site is the product being launched on it. The house itself owns almost nothing: a near-white paper ground, near-black ink, one variable sans at two extremes of weight, and screens with a thin dark bezel. Colour, texture and personality enter only through the work, which is shown at a size where its craft is legible, and each project chapter borrows its ground and its giant name colour from that site's own first frame.\n\nDensity is low and deliberate. One idea per viewport, enormous type, wide silence around the screen. Scroll is the control surface: the hero pins and its screen grows to full bleed while the real site plays frame by frame, chapters scrub their own site as they pass, and everything else moves very little. The system is light only (`color-scheme: light`); there is no theme switch in the build.\n\nThe world rejects the developer-portfolio vocabulary of equal project cards in a grid and rows of technology pills. Technology is named in plain sentences.",
+    "keyCharacteristics": [
+      "Neutral house, colourful work: no house accent; colour comes from the shown sites.",
+      "Geist 800 at -0.04em for display, Geist 400 for reading.",
+      "Real site captures inside bezelled screens, played by scroll.",
+      "One black pill per context for the WhatsApp action; everything else is an underlined link with a CSS chevron.",
+      "Long, soft, low shadows; no borders on surfaces except hairline list rules."
+    ],
+    "rules": [
+      {
+        "name": "The Borrowed Colour Rule",
+        "body": "The house has no accent. A project chapter sets its ground (`--seq-bg`) to the background of that site's first frame and its giant name (`--giant`) to that site's own brand colour; `data-tone` switches the chapter text to Night Ink when the ground is dark. Never introduce a house hue to \"tie the page together\".",
+        "section": "colors"
+      },
+      {
+        "name": "The One Black Button Rule",
+        "body": "Press Ink filled pills are reserved for the WhatsApp action (bar, lineup, contact). Every other action is a ghost pill or a text link.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Weights Rule",
+        "body": "Headings are 800 or 700, text is 400, labels are 500 to 650. No light or thin display weights.",
+        "section": "typography"
+      },
+      {
+        "name": "The Balanced Line Rule",
+        "body": "Headings use `text-wrap: balance`, paragraphs `text-wrap: pretty`.",
+        "section": "typography"
+      },
+      {
+        "name": "The Pooled Shadow Rule",
+        "body": "Every shadow pairs a long blur with a negative spread equal to roughly half its blur, offset downward. No hard offset shadows, no glows, no shadows on text.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do show only real captures of the live sites (desktop `d_###.webp`, mobile `m_###.webp` sequences and their first-frame posters). Every screen, phone and poster must come from the shipped site it links to.",
+      "Do label concept work as concept in the chapter spec line (\"Projeto conceito\"), and say when a brand is a third party with no relationship.",
+      "Do set a new chapter's `--seq-bg` from that site's first frame, its `--giant` from that site's brand colour, its `data-tone` from the ground's lightness, and tune `--fit` so the giant name spans the chapter.",
+      "Do keep one pinned, full-bleed scroll signature per page (the hero); other screens scrub in place.",
+      "Do give every pressable element press feedback (scale 0.97 at 150ms or an equivalent settle).",
+      "Do write copy in pt-BR, in plain sentences: no em or en dashes, no forced lists of three, no inflated claims, no invented metrics.",
+      "Do keep the reduced-motion page complete with meaningful static posters."
+    ],
+    "donts": [
+      "Don't use generated, illustrated or mocked-up imagery of the work, or stock photography.",
+      "Don't introduce a house accent colour or tint the paper toward a hue.",
+      "Don't add a second filled black button in the same view, or fill a non-WhatsApp action.",
+      "Don't present projects as a grid of equal cards or list a stack as a row of technology pills; name the stack in a sentence or a muted note. The hero tag is a single fact strip (name, status, one stack word), not a stack list.",
+      "Don't use icon glyphs or emoji for arrows; chevrons are CSS and icons are inline SVG.",
+      "Don't use hard offset shadows, glows or bordered card surfaces; depth is the pooled shadow under shown work.",
+      "Don't add small uppercase labels above headings."
+    ]
+  }
+}

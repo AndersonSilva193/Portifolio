@@ -1,0 +1,95 @@
+{
+ "regions": [
+  {
+   "id": "brand",
+   "kind": "text",
+   "pixelBox": {
+    "x": 50,
+    "y": 14,
+    "w": 182,
+    "h": 34
+   },
+   "note": "wordmark Anderson Silva, bold near-black sans"
+  },
+  {
+   "id": "nav",
+   "kind": "control",
+   "pixelBox": {
+    "x": 522,
+    "y": 18,
+    "w": 286,
+    "h": 28
+   },
+   "note": "three nav links Sites, Sistemas, Contato"
+  },
+  {
+   "id": "cta-whatsapp",
+   "kind": "control",
+   "pixelBox": {
+    "x": 1100,
+    "y": 8,
+    "w": 196,
+    "h": 46
+   },
+   "note": "black pill button with WhatsApp glyph, Falar no WhatsApp"
+  },
+  {
+   "id": "headline",
+   "kind": "text",
+   "pixelBox": {
+    "x": 138,
+    "y": 70,
+    "w": 1074,
+    "h": 82
+   },
+   "note": "huge tight bold headline Sites com a cara do seu negócio."
+  },
+  {
+   "id": "subline",
+   "kind": "text",
+   "pixelBox": {
+    "x": 306,
+    "y": 152,
+    "w": 734,
+    "h": 38
+   },
+   "note": "one-line subheading in regular weight"
+  },
+  {
+   "id": "screen-frame",
+   "kind": "chrome",
+   "container": true,
+   "pixelBox": {
+    "x": 134,
+    "y": 190,
+    "w": 1078,
+    "h": 520
+   },
+   "note": "thin near-black rounded screen bezel with soft long shadow"
+  },
+  {
+   "id": "screen-site",
+   "kind": "image",
+   "bleed": true,
+   "pixelBox": {
+    "x": 203,
+    "y": 216,
+    "w": 940,
+    "h": 456
+   },
+   "parentId": "screen-frame",
+   "note": "live capture of the Açaí do GQ website first screen: cup of açaí, size ladder, headline Seu açaí até a borda"
+  },
+  {
+   "id": "caption",
+   "kind": "text",
+   "pixelBox": {
+    "x": 400,
+    "y": 696,
+    "w": 544,
+    "h": 40
+   },
+   "note": "caption Açaí do GQ. Cliente real. Visitar o site with underlined link"
+  }
+ ]
+}

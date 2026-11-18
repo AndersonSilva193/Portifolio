@@ -1,0 +1,32 @@
+{
+  "title": "Aprove a composição",
+  "question": "Três composições no nível de lançamento de produto. Minha recomendação: a 1 como primeira dobra, a 3 como linguagem de cada projeto e a 2 como fechamento da seção de sites. Escolha uma ou escreva no campo como combinar.",
+  "options": [
+    {
+      "id": "comp-1-tela",
+      "label": "1. A tela como produto",
+      "kicker": "RECOMENDADA PARA A PRIMEIRA DOBRA",
+      "thesis": "Oferta em uma frase enorme e o site do Açaí logo abaixo, numa tela grande. Ao rolar, a tela cresce até ocupar tudo e o copo enche.",
+      "viewport": "Título centralizado, uma linha de apoio, a tela com o site real e a legenda 'Cliente real. Visitar o site'.",
+      "risk": "A mais segura das três; o impacto depende da animação da tela crescendo.",
+      "comp": ".impeccable/mocks/comp-1-tela.png"
+    },
+    {
+      "id": "comp-2-lineup",
+      "label": "2. Linha de produtos",
+      "thesis": "Os quatro sites lado a lado como uma linha de celulares: mostra a variedade de direções logo de cara.",
+      "viewport": "Título, dois links e quatro telas de celular do mesmo tamanho com o nome embaixo.",
+      "risk": "Telas pequenas escondem o acabamento; funciona melhor como fechamento do que como abertura.",
+      "comp": ".impeccable/mocks/comp-2-lineup.png"
+    },
+    {
+      "id": "comp-3-profundidade",
+      "label": "3. Palavra e tela em profundidade",
+      "thesis": "O nome do projeto gigante atrás da tela e o fundo da página na cor do site. Rolar enche o copo.",
+      "viewport": "Palavra 'Açaí' de ponta a ponta, a tela sobreposta, a etiqueta técnica e 'Role para encher o copo'.",
+      "risk": "Como abertura, fala do Açaí e não de você; é forte como capítulo de cada projeto.",
+      "comp": ".impeccable/mocks/comp-3-profundidade.png"
+    }
+  ],
+  "steer": true
+}

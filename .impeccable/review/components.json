@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 3,
+  "stage": "components",
+  "id": "components",
+  "title": "Plan and asset review · index.html",
+  "comp": {
+    "path": ".impeccable/mocks/comp-1-tela.png",
+    "width": 1344,
+    "height": 752
+  },
+  "specSha256": "d74033d25eff561de2e9abcdf759c02b0429d60aff704542c789f71a11888136",
+  "components": [
+    {
+      "id": "screen-site",
+      "name": "Screen site",
+      "kind": "image",
+      "role": "asset",
+      "box": {
+        "x": 0.151,
+        "y": 0.2872,
+        "w": 0.6994,
+        "h": 0.6064
+      },
+      "note": "live capture of the Açaí do GQ website first screen: cup of açaí, size ladder, headline Seu açaí até a borda",
+      "medium": "raster",
+      "preview": {
+        "kind": "image",
+        "path": "assets/plates/screen-site.png"
+      },
+      "dependencies": []
+    }
+  ],
+  "codeRegions": [
+    {
+      "id": "brand",
+      "name": "Brand",
+      "kind": "text",
+      "box": {
+        "x": 0.0372,
+        "y": 0.0186,
+        "w": 0.1354,
+        "h": 0.0452
+      },
+      "note": "wordmark Anderson Silva, bold near-black sans"
+    },
+    {
+      "id": "nav",
+      "name": "Nav",
+      "kind": "control",
+      "box": {
+        "x": 0.3884,
+        "y": 0.0239,
+        "w": 0.2128,
+        "h": 0.0372
+      },
+      "note": "three nav links Sites, Sistemas, Contato"
+    },
+    {
+      "id": "cta-whatsapp",
+      "name": "Cta whatsapp",
+      "kind": "control",
+      "box": {
+        "x": 0.8185,
+        "y": 0.0106,
+        "w": 0.1458,
+        "h": 0.0612
+      },
+      "note": "black pill button with WhatsApp glyph, Falar no WhatsApp"
+    },
+    {
+      "id": "headline",
+      "name": "Headline",
+      "kind": "text",
+      "box": {
+        "x": 0.1027,
+        "y": 0.0931,
+        "w": 0.7991,
+        "h": 0.109
+      },
+      "note": "huge tight bold headline Sites com a cara do seu negócio."
+    },
+    {
+      "id": "subline",
+      "name": "Subline",
+      "kind": "text",
+      "box": {
+        "x": 0.2277,
+        "y": 0.2021,
+        "w": 0.5461,
+        "h": 0.0505
+      },
+      "note": "one-line subheading in regular weight"
+    },
+    {
+      "id": "screen-frame",
+      "name": "Screen frame",
+      "kind": "chrome",
+      "box": {
+        "x": 0.0997,
+        "y": 0.2527,
+        "w": 0.8021,
+        "h": 0.6915
+      },
+      "note": "thin near-black rounded screen bezel with soft long shadow"
+    },
+    {
+      "id": "caption",
+      "name": "Caption",
+      "kind": "text",
+      "box": {
+        "x": 0.2976,
+        "y": 0.9255,
+        "w": 0.4048,
+        "h": 0.0532
+      },
+      "note": "caption Açaí do GQ. Cliente real. Visitar o site with underlined link"
+    }
+  ]
+}

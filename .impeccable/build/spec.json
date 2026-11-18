@@ -1,0 +1,615 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-11-17T23:53:36.926Z",
+  "comp": ".impeccable/mocks/comp-1-tela.png",
+  "warnings": [
+    "region screen-frame: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)",
+    "region screen-site: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+  ],
+  "uncoveredInkCells": [
+    "B2",
+    "I2"
+  ],
+  "compSize": {
+    "width": 1344,
+    "height": 752
+  },
+  "aspect": 1.7872,
+  "orientation": "landscape",
+  "palette": [
+    {
+      "hex": "#f4f2f1",
+      "coverage": 0.8638
+    },
+    {
+      "hex": "#120e13",
+      "coverage": 0.0659
+    },
+    {
+      "hex": "#cfccc2",
+      "coverage": 0.0449
+    },
+    {
+      "hex": "#b1afaf",
+      "coverage": 0.0158
+    },
+    {
+      "hex": "#3c1920",
+      "coverage": 0.0097
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.0139,
+      "strength": 0.3931
+    },
+    {
+      "y": 0.0694,
+      "strength": 0.4287
+    },
+    {
+      "y": 0.125,
+      "strength": 1
+    },
+    {
+      "y": 0.1806,
+      "strength": 1
+    },
+    {
+      "y": 0.2361,
+      "strength": 0.5966
+    },
+    {
+      "y": 0.2778,
+      "strength": 1
+    },
+    {
+      "y": 0.5556,
+      "strength": 0.3034
+    },
+    {
+      "y": 0.5972,
+      "strength": 0.2631
+    },
+    {
+      "y": 0.7083,
+      "strength": 0.2065
+    },
+    {
+      "y": 0.9028,
+      "strength": 0.9193
+    },
+    {
+      "y": 0.9583,
+      "strength": 0.3317
+    }
+  ],
+  "regions": [
+    {
+      "id": "brand",
+      "kind": "text",
+      "note": "wordmark Anderson Silva, bold near-black sans",
+      "grid": null,
+      "box": {
+        "x": 0.0372,
+        "y": 0.0186,
+        "w": 0.1354,
+        "h": 0.0452
+      },
+      "px": {
+        "x": 50,
+        "y": 14,
+        "w": 182,
+        "h": 34
+      },
+      "aspect": 5.3529,
+      "palette": [
+        {
+          "hex": "#f8f8f8",
+          "coverage": 0.7382
+        },
+        {
+          "hex": "#0d0d0f",
+          "coverage": 0.1787
+        },
+        {
+          "hex": "#cbcbcd",
+          "coverage": 0.0416
+        },
+        {
+          "hex": "#9c9e9c",
+          "coverage": 0.0249
+        },
+        {
+          "hex": "#646565",
+          "coverage": 0.0166
+        }
+      ],
+      "detail": {
+        "energy": 55.9828
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 11,
+          "capHeightPx": 19,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.7383,
+          "advTall": 0.7383,
+          "advX": 0.7251,
+          "gap": 0.0659,
+          "xRatio": 0.7528,
+          "stemW": 0.2262,
+          "contrast": 1.2083,
+          "serif": null,
+          "densTall": 0.6079,
+          "densX": 0.646,
+          "weight": 0.6079
+        },
+        "widthClass": "wide",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "nav",
+      "kind": "control",
+      "note": "three nav links Sites, Sistemas, Contato",
+      "grid": null,
+      "box": {
+        "x": 0.3884,
+        "y": 0.0239,
+        "w": 0.2128,
+        "h": 0.0372
+      },
+      "px": {
+        "x": 522,
+        "y": 18,
+        "w": 286,
+        "h": 28
+      },
+      "aspect": 10.2143,
+      "palette": [
+        {
+          "hex": "#f8f8f8",
+          "coverage": 0.8902
+        },
+        {
+          "hex": "#0e0e0e",
+          "coverage": 0.0523
+        },
+        {
+          "hex": "#939393",
+          "coverage": 0.0251
+        },
+        {
+          "hex": "#48494b",
+          "coverage": 0.0241
+        },
+        {
+          "hex": "#c6c2c6",
+          "coverage": 0.0084
+        }
+      ],
+      "detail": {
+        "energy": 54.6656
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      }
+    },
+    {
+      "id": "cta-whatsapp",
+      "kind": "control",
+      "note": "black pill button with WhatsApp glyph, Falar no WhatsApp",
+      "grid": null,
+      "box": {
+        "x": 0.8185,
+        "y": 0.0106,
+        "w": 0.1458,
+        "h": 0.0612
+      },
+      "px": {
+        "x": 1100,
+        "y": 8,
+        "w": 196,
+        "h": 46
+      },
+      "aspect": 4.2609,
+      "palette": [
+        {
+          "hex": "#090912",
+          "coverage": 0.6188
+        },
+        {
+          "hex": "#f6f6f6",
+          "coverage": 0.2652
+        },
+        {
+          "hex": "#38383f",
+          "coverage": 0.0751
+        },
+        {
+          "hex": "#b3b3b5",
+          "coverage": 0.0238
+        },
+        {
+          "hex": "#69696b",
+          "coverage": 0.0171
+        }
+      ],
+      "detail": {
+        "energy": 50.096
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      }
+    },
+    {
+      "id": "headline",
+      "kind": "text",
+      "note": "huge tight bold headline Sites com a cara do seu negócio.",
+      "grid": null,
+      "box": {
+        "x": 0.1027,
+        "y": 0.0931,
+        "w": 0.7991,
+        "h": 0.109
+      },
+      "px": {
+        "x": 138,
+        "y": 70,
+        "w": 1074,
+        "h": 82
+      },
+      "aspect": 13.0976,
+      "palette": [
+        {
+          "hex": "#f8f8f8",
+          "coverage": 0.704
+        },
+        {
+          "hex": "#0a0a10",
+          "coverage": 0.2647
+        },
+        {
+          "hex": "#404041",
+          "coverage": 0.0166
+        },
+        {
+          "hex": "#b3b3b3",
+          "coverage": 0.0093
+        },
+        {
+          "hex": "#757575",
+          "coverage": 0.0054
+        }
+      ],
+      "detail": {
+        "energy": 125.5105
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 24,
+          "capHeightPx": 53.3,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.731,
+          "advTall": 0.6279,
+          "advX": 0.731,
+          "gap": 0.0562,
+          "xRatio": 0.7187,
+          "stemW": 0.2352,
+          "contrast": 1.3063,
+          "serif": 1.3758,
+          "densTall": 0.6192,
+          "densX": 0.6636,
+          "weight": 0.6192
+        },
+        "widthClass": "wide",
+        "weightClass": "bold",
+        "chosen": {
+          "family": "Geist",
+          "weight": 800,
+          "fontSizePx": 74,
+          "source": "index",
+          "fp": {
+            "lines": 1,
+            "glyphs": 25,
+            "capHeightPx": 54,
+            "inkIsDark": true,
+            "allCaps": false,
+            "advance": 0.7593,
+            "advTall": 0.6481,
+            "advX": 0.7593,
+            "gap": 0.1111,
+            "xRatio": 0.7407,
+            "stemW": 0.2434,
+            "contrast": 1.3384,
+            "serif": 1,
+            "densTall": 0.619,
+            "densX": 0.6578,
+            "weight": 0.619
+          },
+          "stamp": "aea7704ba8d6"
+        }
+      }
+    },
+    {
+      "id": "subline",
+      "kind": "text",
+      "note": "one-line subheading in regular weight",
+      "grid": null,
+      "box": {
+        "x": 0.2277,
+        "y": 0.2021,
+        "w": 0.5461,
+        "h": 0.0505
+      },
+      "px": {
+        "x": 306,
+        "y": 152,
+        "w": 734,
+        "h": 38
+      },
+      "aspect": 19.3158,
+      "palette": [
+        {
+          "hex": "#f7f7f7",
+          "coverage": 0.8752
+        },
+        {
+          "hex": "#0d0c0e",
+          "coverage": 0.0466
+        },
+        {
+          "hex": "#969898",
+          "coverage": 0.0289
+        },
+        {
+          "hex": "#6a6a6b",
+          "coverage": 0.0264
+        },
+        {
+          "hex": "#383839",
+          "coverage": 0.0228
+        }
+      ],
+      "detail": {
+        "energy": 65.3604
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 57,
+          "capHeightPx": 16,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6544,
+          "advTall": 0.6232,
+          "advX": 0.6544,
+          "gap": 0.0935,
+          "xRatio": 0.7592,
+          "stemW": 0.1563,
+          "contrast": 1.1009,
+          "serif": null,
+          "densTall": 0.4981,
+          "densX": 0.5362,
+          "weight": 0.4981
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "screen-frame",
+      "kind": "chrome",
+      "note": "thin near-black rounded screen bezel with soft long shadow",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.0997,
+        "y": 0.2527,
+        "w": 0.8021,
+        "h": 0.6915
+      },
+      "px": {
+        "x": 134,
+        "y": 190,
+        "w": 1078,
+        "h": 520
+      },
+      "aspect": 2.0731,
+      "palette": [
+        {
+          "hex": "#f0edeb",
+          "coverage": 0.8077
+        },
+        {
+          "hex": "#cac7bf",
+          "coverage": 0.1043
+        },
+        {
+          "hex": "#181114",
+          "coverage": 0.0565
+        },
+        {
+          "hex": "#3a1a1f",
+          "coverage": 0.02
+        },
+        {
+          "hex": "#723646",
+          "coverage": 0.0115
+        }
+      ],
+      "detail": {
+        "energy": 28.7233
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      }
+    },
+    {
+      "id": "screen-site",
+      "kind": "image",
+      "note": "live capture of the Açaí do GQ website first screen: cup of açaí, size ladder, headline Seu açaí até a borda",
+      "grid": null,
+      "bleed": true,
+      "parentId": "screen-frame",
+      "box": {
+        "x": 0.151,
+        "y": 0.2872,
+        "w": 0.6994,
+        "h": 0.6064
+      },
+      "px": {
+        "x": 203,
+        "y": 216,
+        "w": 940,
+        "h": 456
+      },
+      "aspect": 2.0614,
+      "palette": [
+        {
+          "hex": "#f0ece9",
+          "coverage": 0.8174
+        },
+        {
+          "hex": "#cfcdc1",
+          "coverage": 0.0914
+        },
+        {
+          "hex": "#291519",
+          "coverage": 0.0601
+        },
+        {
+          "hex": "#612e3b",
+          "coverage": 0.0163
+        },
+        {
+          "hex": "#ab5b6e",
+          "coverage": 0.0148
+        }
+      ],
+      "detail": {
+        "energy": 20.5009
+      },
+      "medium": "raster",
+      "plate": "assets/plates/screen-site.png",
+      "text": null
+    },
+    {
+      "id": "caption",
+      "kind": "text",
+      "note": "caption Açaí do GQ. Cliente real. Visitar o site with underlined link",
+      "grid": null,
+      "box": {
+        "x": 0.2976,
+        "y": 0.9255,
+        "w": 0.4048,
+        "h": 0.0532
+      },
+      "px": {
+        "x": 400,
+        "y": 696,
+        "w": 544,
+        "h": 40
+      },
+      "aspect": 13.6,
+      "palette": [
+        {
+          "hex": "#e8e5e6",
+          "coverage": 0.9237
+        },
+        {
+          "hex": "#0f0f10",
+          "coverage": 0.0427
+        },
+        {
+          "hex": "#acacac",
+          "coverage": 0.015
+        },
+        {
+          "hex": "#6c6e6d",
+          "coverage": 0.013
+        },
+        {
+          "hex": "#3e3e3e",
+          "coverage": 0.0055
+        }
+      ],
+      "detail": {
+        "energy": 37.5029
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 30,
+          "capHeightPx": 13.9,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6472,
+          "advTall": 0.4674,
+          "advX": 0.6472,
+          "gap": 0.1079,
+          "xRatio": 0.7381,
+          "stemW": 0.1837,
+          "contrast": 1.1455,
+          "serif": null,
+          "densTall": 0.6,
+          "densX": 0.5912,
+          "weight": 0.6
+        },
+        "widthClass": "normal",
+        "weightClass": "bold"
+      }
+    }
+  ],
+  "compSha256": "98b3bc5c4c1c785b6c9ffd437b078f1f1e6c607cd7b76fd9710653009c311258",
+  "regionsSource": {
+    "path": ".impeccable/build/regions.json",
+    "sha256": "23998c29deab6a27e964d4792d0586dd54b34cdb840dc272e1ce54994eaa6595"
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "tool": "comp-diff",
+  "version": 1,
+  "createdAt": "2026-11-18T00:32:37.349Z",
+  "label": "desktop",
+  "comp": ".impeccable/mocks/comp-1-tela.png",
+  "build": ".impeccable/review/desktop.png",
+  "spec": ".impeccable/build/spec.json",
+  "compSize": "1344x752",
+  "buildSize": "1440x8250",
+  "align": "top",
+  "overall": 0.7381,
+  "verdict": "drift",
+  "scores": {
+    "overall": 0.7381,
+    "structure": 0.6296,
+    "color": 0.8722,
+    "colorIntersection": 0.7569,
+    "paletteMatch": 0.9344,
+    "detail": 0.6726,
+    "detailRaw": 0.7455,
+    "detailAdded": 0.1458,
+    "bands": 0.8769
+  },
+  "palette": {
+    "comp": [
+      {
+        "hex": "#f4f2f1",
+        "coverage": 0.8587
+      },
+      {
+        "hex": "#120e13",
+        "coverage": 0.0655
+      },
+      {
+        "hex": "#cfccc2",
+        "coverage": 0.0446
+      },
+      {
+        "hex": "#b1afaf",
+        "coverage": 0.0157
+      },
+      {
+        "hex": "#3c1920",
+        "coverage": 0.0096
+      },
+      {
+        "hex": "#08733d",
+        "coverage": 0.0059
+      }
+    ],
+    "build": [
+      {
+        "hex": "#f1efed",
+        "coverage": 0.809
+      },
+      {
+        "hex": "#131118",
+        "coverage": 0.0753
+      },
+      {
+        "hex": "#c3c3bb",
+        "coverage": 0.0683
+      },
+      {
+        "hex": "#9fa295",
+        "coverage": 0.0306
+      },
+      {
+        "hex": "#6c6961",
+        "coverage": 0.0103
+      },
+      {
+        "hex": "#4d2a31",
+        "coverage": 0.0065
+      }
+    ]
+  },
+  "regions": [
+    {
+      "id": "brand",
+      "x": 0.0372,
+      "y": 0.0186,
+      "w": 0.1354,
+      "h": 0.0452,
+      "kind": "text",
+      "score": {
+        "overall": 0.627,
+        "structure": 0.5342,
+        "color": 0.8781,
+        "colorIntersection": 0.7906,
+        "paletteMatch": 0.9253,
+        "detail": 0.6572,
+        "detailRaw": 0.7145,
+        "detailAdded": 0.1146,
+        "bands": 0.4178
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 2,
+          "y": 7,
+          "w": 175,
+          "h": 20
+        },
+        "build": {
+          "x": 1,
+          "y": 6,
+          "w": 172,
+          "h": 19
+        }
+      }
+    },
+    {
+      "id": "nav",
+      "x": 0.3884,
+      "y": 0.0239,
+      "w": 0.2128,
+      "h": 0.0372,
+      "kind": "control",
+      "score": {
+        "overall": 0.7709,
+        "structure": 0.7507,
+        "color": 0.9555,
+        "colorIntersection": 0.9126,
+        "paletteMatch": 0.9786,
+        "detail": 0.4934,
+        "detailRaw": 0.5664,
+        "detailAdded": 0.1458,
+        "bands": 0.44
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 10,
+          "y": 7,
+          "w": 267,
+          "h": 13
+        },
+        "build": {
+          "x": 16,
+          "y": 6,
+          "w": 270,
+          "h": 11
+        }
+      }
+    },
+    {
+      "id": "cta-whatsapp",
+      "x": 0.8185,
+      "y": 0.0106,
+      "w": 0.1458,
+      "h": 0.0612,
+      "kind": "control",
+      "score": {
+        "overall": 0.6294,
+        "structure": 0.5565,
+        "color": 0.7685,
+        "colorIntersection": 0.6069,
+        "paletteMatch": 0.8556,
+        "detail": 0.5499,
+        "detailRaw": 0.6385,
+        "detailAdded": 0.1771,
+        "bands": 0.7756
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 196,
+          "h": 46
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 196,
+          "h": 46
+        }
+      }
+    },
+    {
+      "id": "headline",
+      "x": 0.1027,
+      "y": 0.0931,
+      "w": 0.7991,
+      "h": 0.109,
+      "kind": "text",
+      "score": {
+        "overall": 0.6124,
+        "structure": 0.5147,
+        "color": 0.8868,
+        "colorIntersection": 0.8119,
+        "paletteMatch": 0.9271,
+        "detail": 0.5891,
+        "detailRaw": 0.6673,
+        "detailAdded": 0.1563,
+        "bands": 0.45
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 8,
+          "y": 8,
+          "w": 1059,
+          "h": 72
+        },
+        "build": {
+          "x": 6,
+          "y": 2,
+          "w": 1061,
+          "h": 80
+        }
+      }
+    },
+    {
+      "id": "subline",
+      "x": 0.2277,
+      "y": 0.2021,
+      "w": 0.5461,
+      "h": 0.0505,
+      "kind": "text",
+      "score": {
+        "overall": 0.7592,
+        "structure": 0.944,
+        "color": 0.9441,
+        "colorIntersection": 0.9144,
+        "paletteMatch": 0.9601,
+        "detail": 0.2214,
+        "detailRaw": 0.3464,
+        "detailAdded": 0.25,
+        "bands": 0.18
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 11,
+          "y": 8,
+          "w": 714,
+          "h": 21
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 734,
+          "h": 21
+        }
+      }
+    },
+    {
+      "id": "screen-frame",
+      "x": 0.0997,
+      "y": 0.2527,
+      "w": 0.8021,
+      "h": 0.6915,
+      "kind": "chrome",
+      "score": {
+        "overall": 0.6614,
+        "structure": 0.6053,
+        "color": 0.7452,
+        "colorIntersection": 0.5892,
+        "paletteMatch": 0.8292,
+        "detail": 0.6404,
+        "detailRaw": 0.7029,
+        "detailAdded": 0.125,
+        "bands": 0.6875
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 62,
+          "y": 20,
+          "w": 953,
+          "h": 500
+        },
+        "build": {
+          "x": 64,
+          "y": 14,
+          "w": 950,
+          "h": 463
+        }
+      }
+    },
+    {
+      "id": "screen-site",
+      "x": 0.151,
+      "y": 0.2872,
+      "w": 0.6994,
+      "h": 0.6064,
+      "kind": "image",
+      "score": {
+        "overall": 0.4958,
+        "structure": 0.6695,
+        "color": 0.6566,
+        "colorIntersection": 0.4594,
+        "paletteMatch": 0.7627,
+        "detail": 0.338,
+        "detailRaw": 0.5099,
+        "detailAdded": 0.3438,
+        "bands": 0.5626
+      },
+      "verdict": "missing",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 940,
+          "h": 456
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 940,
+          "h": 451
+        }
+      }
+    },
+    {
+      "id": "caption",
+      "x": 0.2976,
+      "y": 0.9255,
+      "w": 0.4048,
+      "h": 0.0532,
+      "kind": "text",
+      "score": {
+        "overall": 0.6298,
+        "structure": 0.7024,
+        "color": 0.7645,
+        "colorIntersection": 0.6219,
+        "paletteMatch": 0.8414,
+        "detail": 0.3623,
+        "detailRaw": 0.4717,
+        "detailAdded": 0.2188,
+        "bands": 0.3314
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 112,
+          "y": 9,
+          "w": 320,
+          "h": 21
+        },
+        "build": {
+          "x": 91,
+          "y": 16,
+          "w": 365,
+          "h": 22
+        }
+      }
+    }
+  ],
+  "files": {
+    "sideBySide": "C:/Users/ameta/OneDrive/Desktop/projetos/Portifolio/.impeccable/review/diff/desktop/side-by-side.png",
+    "heatmap": "C:/Users/ameta/OneDrive/Desktop/projetos/Portifolio/.impeccable/review/diff/desktop/heatmap.png",
+    "regionFiles": [
+      "C:/Users/ameta/OneDrive/Desktop/projetos/Portifolio/.impeccable/review/diff/desktop/regions/brand.png",
+      "C:/Users/ameta/OneDrive/Desktop/projetos/Portifolio/.impeccable/review/diff/desktop/regions/nav.png",
+      "C:/Users/ameta/OneDrive/Desktop/projetos/Portifolio/.impeccable/review/diff/desktop/regions/cta-whatsapp.png",
+      "C:/Users/ameta/OneDrive/Desktop/projetos/Portifolio/.impeccable/review/diff/desktop/regions/headline.png",
+      "C:/Users/ameta/OneDrive/Desktop/projetos/Portifolio/.impeccable/review/diff/desktop/regions/subline.png",
+      "C:/Users/ameta/OneDrive/Desktop/projetos/Portifolio/.impeccable/review/diff/desktop/regions/screen-frame.png",
+      "C:/Users/ameta/OneDrive/Desktop/projetos/Portifolio/.impeccable/review/diff/desktop/regions/screen-site.png",
+      "C:/Users/ameta/OneDrive/Desktop/projetos/Portifolio/.impeccable/review/diff/desktop/regions/caption.png"
+    ]
+  }
+}

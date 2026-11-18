@@ -1,0 +1,62 @@
+{
+  "project": "Portfólio Anderson Silva",
+  "generated_media_shipped": false,
+  "note": "Nenhuma mídia gerada por IA vai para o site. Os mockups de decisão e composição (Higgsfield, gpt_image_2_6, 1k, qualidade média) ficam só em .impeccable/mocks/ e não são publicados.",
+  "assets": [
+    {
+      "path": "img/seq/acai/d_000..d_079.webp",
+      "origin": "Captura headless Chrome (puppeteer-core) do site real https://acai-do-gq.vercel.app, viewport 1440x700, 80 posições de scroll de 0 a 1890 px, WebP q70",
+      "rights": "Site de cliente real feito pelo autor",
+      "use": "Cena principal: tela cresce e o copo enche com o scroll. No celular carrega 1 a cada 2 quadros.",
+      "fallback": "assets/plates/screen-site.png e d_000.webp como pôster"
+    },
+    {
+      "path": "img/seq/voltride/d_000..d_047.webp",
+      "origin": "Captura headless Chrome de https://voltride1.vercel.app, 1440x700, 48 posições de 0 a 2380 px, WebP q58",
+      "rights": "Projeto conceito do autor",
+      "use": "Capítulo Volt Ride, scrub sem pin",
+      "fallback": "d_000.webp como pôster"
+    },
+    {
+      "path": "img/seq/barber/d_000..d_031.webp",
+      "origin": "Captura headless Chrome de https://barberagendaonline.com, 1440x700, 32 posições de 0 a 1470 px, WebP q64",
+      "rights": "Sistema do autor com uso real",
+      "use": "Capítulo AgendaBarber",
+      "fallback": "d_000.webp como pôster"
+    },
+    {
+      "path": "img/seq/kurama/d_000..d_051.webp",
+      "origin": "Captura headless Chrome de https://kurama-lp.vercel.app, 1440x700, 52 posições de 0 a 1820 px, WebP q62",
+      "rights": "Projeto conceito do autor; a marca Redragon é de terceiros e está rotulada como sem vínculo",
+      "use": "Capítulo Kumara 8K",
+      "fallback": "d_000.webp como pôster"
+    },
+    {
+      "path": "img/seq/*/m_000.webp",
+      "origin": "Captura headless Chrome dos mesmos sites em 390x844, DPR 1,5, scroll 0",
+      "use": "Telas de celular da linha final"
+    },
+    {
+      "path": "assets/plates/screen-site.png",
+      "origin": "Captura headless Chrome de https://acai-do-gq.vercel.app em 1440x700, scroll 0 (plate aprovado na revisão de assets)",
+      "use": "Fallback PNG do pôster da primeira dobra"
+    },
+    {
+      "path": "img/painel-agendabarber.webp",
+      "origin": "Recorte de img/agendabarberoff.jpeg (captura do painel feita pelo autor), sem a barra do navegador"
+    },
+    {
+      "path": "img/og.png",
+      "origin": "Captura da primeira dobra deste portfólio em 1200x630"
+    },
+    {
+      "path": "fonts/geist-latin*-wght-normal.woff2",
+      "origin": "@fontsource-variable/geist@5.1.0 via jsDelivr",
+      "rights": "SIL Open Font License 1.1"
+    }
+  ],
+  "budget": {
+    "desktop_total_sequences_mb": 8.4,
+    "loading": "frame 0 + 1 a cada 8 + resto, em lotes de 6; capítulos só começam a baixar a 120% de distância da viewport; saveData e reduced motion não baixam sequência nenhuma"
+  }
+}

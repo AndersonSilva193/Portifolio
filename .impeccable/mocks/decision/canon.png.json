@@ -1,0 +1,9 @@
+{
+  "tool": "higgsfield generate_image_batch",
+  "model": "gpt_image_2_6",
+  "quality": "medium",
+  "resolution": "1k",
+  "aspect_ratio": "16:9",
+  "job_id": "fd4fa63f-ac0e-4c36-90f9-c707d8e8e176",
+  "prompt": "See job fd4fa63f-ac0e-4c36-90f9-c707d8e8e176 in Higgsfield history; decision-round comp for direction card canon, references: live-site captures (acai, voltride, barber, kurama) and, for tropicalia, the catalog board."
+}

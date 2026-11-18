@@ -1,0 +1,11 @@
+{
+  "tool": "higgsfield generate_image_batch",
+  "model": "gpt_image_2_6",
+  "quality": "medium",
+  "resolution": "1k",
+  "aspect_ratio": "16:9",
+  "job_id": "79d30ad1-1d6a-49e8-bc18-1ce82fcb1b24",
+  "approved": false,
+  "note": "Used as the grammar of each project chapter.",
+  "prompt": "Premium product-launch-level portfolio comp for Anderson Silva; see Higgsfield job 79d30ad1-1d6a-49e8-bc18-1ce82fcb1b24 for the exact prompt; reference: live capture of acai-do-gq.vercel.app"
+}
