@@ -103,21 +103,36 @@
     let focus = (Number.isNaN(fv) ? 50 : fv) / 100;
     const canvas = screenEl.querySelector('canvas');
     const g = canvas.getContext('2d');
-    const urls = []; /* no celular, um quadro a cada dois */
-    for (let i = 0; i < total; i += step) urls.push(`img/seq/${name}/d_${pad(i)}.webp`);
-    const finalUrl = `img/seq/${name}/d_${pad(total - 1)}.webp`;
-    if (urls[urls.length - 1] !== finalUrl) urls.push(finalUrl);
+    const ids = []; /* no celular, um quadro a cada dois */
+    for (let i = 0; i < total; i += step) ids.push(i);
+    if (ids[ids.length - 1] !== total - 1) ids.push(total - 1);
+    const urls = ids.map((i) => `img/seq/${name}/d_${pad(i)}.webp`);
+    /* Onde a captura rola a página (data-shift="i:px", medido por tools/frame_shifts.py), o quadro i+1 é o i
+       deslocado para cima. Ali o canvas desliza entre os dois em vez de fundir, que dava imagem dupla e salto. */
+    const shifts = {};
+    (screenEl.dataset.shift || '').split(/\s+/).forEach((p) => {
+      const [i, s] = p.split(':').map(Number);
+      if (s > 0) shifts[i] = s;
+    });
+    const shiftTop = +screenEl.dataset.shiftTop || 0; /* barra fixa do site: não rola */
+    const scrollBetween = (a, b) => {
+      let sum = 0;
+      for (let i = ids[a]; i < ids[b]; i++) { if (!shifts[i]) return 0; sum += shifts[i]; }
+      return sum;
+    };
     const count = urls.length;
     const imgs = new Array(count);
-    let pos = 0, shown = '', extra = 1, started = false, destroyed = false, raf = 0;
+    let pos = 0, shown = '', extra = 1, started = false, destroyed = false, raf = 0, sliding = false;
     let idle = 0, settleTween = null, seekVersion = 0;
     const settle = { v: 0 };
-    function paint(im, alpha) {
+    function paint(im, alpha, dy = 0, band = 0) {
       const cw = canvas.width, ch = canvas.height;
       const s = Math.max(cw / im.naturalWidth, ch / im.naturalHeight);
       const w = im.naturalWidth * s, h = im.naturalHeight * s;
+      const x = (cw - w) * focus; /* cobre, alinha pelo topo e respeita o foco horizontal */
       g.globalAlpha = alpha;
-      g.drawImage(im, (cw - w) * focus, 0, w, h); /* cobre, alinha pelo topo e respeita o foco horizontal */
+      if (band) g.drawImage(im, 0, 0, im.naturalWidth, band, x, 0, w, band * s);
+      else g.drawImage(im, x, dy * s, w, h);
       g.globalAlpha = 1;
     }
     /* desenha o quadro atual e funde o vizinho na proporção da posição: o movimento fica contínuo entre quadros */
@@ -134,8 +149,18 @@
       const f = a === b ? 0 : (pos - a) / (b - a);
       const key = a + ':' + b + ':' + f.toFixed(3) + ':' + focus.toFixed(3);
       if (key === shown && !force) return;
-      paint(imgs[a], 1);
-      if (f > 0) paint(imgs[b], f);
+      const roll = a === b ? 0 : scrollBetween(a, b);
+      sliding = roll > 0;
+      if (sliding) {
+        /* b por baixo, a deslizando por cima e b de novo na proporção: o conteúdo rola sem fantasma */
+        paint(imgs[b], 1, (1 - f) * roll);
+        paint(imgs[a], 1, -f * roll);
+        if (f > 0) paint(imgs[b], f, (1 - f) * roll);
+        if (shiftTop) { paint(imgs[a], 1, 0, shiftTop); if (f > 0) paint(imgs[b], f, 0, shiftTop); }
+      } else {
+        paint(imgs[a], 1);
+        if (f > 0) paint(imgs[b], f);
+      }
       shown = key;
       screenEl.classList.add('has-frames');
     }
@@ -195,7 +220,8 @@
         draw();
         /* Ao parar, deixa um quadro nítido. Uma nova rolagem cancela esse ajuste. */
         idle = setTimeout(() => {
-          if (destroyed || !window.gsap || Math.abs(pos - Math.round(pos)) < 0.002) return;
+          /* No trecho que rola o quadro já sai nítido; ajustar ali faria a página andar sozinha. */
+          if (destroyed || !window.gsap || sliding || Math.abs(pos - Math.round(pos)) < 0.002) return;
           settle.v = pos;
           settleTween = gsap.to(settle, {
             v: Math.round(pos), duration: 0.2, ease: 'power2.out',
