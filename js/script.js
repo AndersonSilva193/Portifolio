@@ -105,18 +105,13 @@
     const g = canvas.getContext('2d');
     const urls = []; /* no celular, um quadro a cada dois */
     for (let i = 0; i < total; i += step) urls.push(`img/seq/${name}/d_${pad(i)}.webp`);
+    const finalUrl = `img/seq/${name}/d_${pad(total - 1)}.webp`;
+    if (urls[urls.length - 1] !== finalUrl) urls.push(finalUrl);
     const count = urls.length;
     const imgs = new Array(count);
-    let pos = 0, shown = '', extra = 1, started = false, raf = 0, idle = 0;
+    let pos = 0, shown = '', extra = 1, started = false, destroyed = false, raf = 0;
+    let idle = 0, settleTween = null, seekVersion = 0;
     const settle = { v: 0 };
-
-    function nearest(i) {
-      for (let d = 0; d < count; d++) {
-        if (imgs[i - d]) return i - d;
-        if (imgs[i + d]) return i + d;
-      }
-      return -1;
-    }
     function paint(im, alpha) {
       const cw = canvas.width, ch = canvas.height;
       const s = Math.max(cw / im.naturalWidth, ch / im.naturalHeight);
@@ -128,18 +123,24 @@
     /* desenha o quadro atual e funde o vizinho na proporção da posição: o movimento fica contínuo entre quadros */
     function render(force) {
       raf = 0;
-      const i0 = Math.floor(pos), f = pos - i0;
-      const a = nearest(i0);
-      if (a < 0) return;
-      const b = f > 0.02 && imgs[i0 + 1] ? i0 + 1 : -1;
-      const key = a + ':' + b + ':' + (b < 0 ? 0 : f.toFixed(2)) + ':' + focus.toFixed(3);
+      if (destroyed) return;
+      /* Interpola os vizinhos já decodificados, inclusive enquanto os demais carregam. */
+      let a = Math.floor(pos), b = Math.ceil(pos);
+      while (a >= 0 && !imgs[a]) a--;
+      while (b < count && !imgs[b]) b++;
+      if (a < 0 && b >= count) return;
+      if (a < 0) a = b;
+      if (b >= count) b = a;
+      const f = a === b ? 0 : (pos - a) / (b - a);
+      const key = a + ':' + b + ':' + f.toFixed(3) + ':' + focus.toFixed(3);
       if (key === shown && !force) return;
       paint(imgs[a], 1);
-      if (b >= 0 && a === i0) paint(imgs[b], f);
+      if (f > 0) paint(imgs[b], f);
       shown = key;
       screenEl.classList.add('has-frames');
     }
     function draw(force) {
+      if (destroyed) return;
       if (force) { if (raf) cancelAnimationFrame(raf); render(true); return; }
       if (!raf) raf = requestAnimationFrame(() => render(false));
     }
@@ -153,10 +154,14 @@
     }
     function load(i) {
       return new Promise((res) => {
-        if (imgs[i]) return res();
+        if (destroyed || imgs[i]) return res();
         const im = new Image();
         im.decoding = 'async';
-        im.onload = () => { imgs[i] = im; draw(); res(); };
+        im.onload = async () => {
+          try { await im.decode(); } catch (e) { /* onload já confirmou uma imagem válida */ }
+          if (!destroyed) { imgs[i] = im; draw(); }
+          res();
+        };
         im.onerror = () => res(); /* quadro que falhou: o vizinho cobre */
         im.src = urls[i];
       });
@@ -165,13 +170,13 @@
       for (let k = 0; k < ids.length; k += size) await Promise.all(ids.slice(k, k + size).map(load));
     }
     function start() {
-      if (started) return;
+      if (started || destroyed) return;
       started = true;
       resize();
       (async () => {
         await load(0);
         const all = urls.map((_, i) => i);
-        await batch(all.filter((i) => i % 8 === 0));
+        await batch([count - 1, ...all.filter((i) => i % 8 === 0 && i !== count - 1)]);
         await batch(all);
       })();
     }
@@ -183,17 +188,32 @@
       setExtra(v) { extra = v; resize(); },
       setFocus(v) { if (Math.abs(v - focus) > 0.002) { focus = v; draw(true); } },
       seek(p) {
+        const version = ++seekVersion;
+        clearTimeout(idle);
+        if (settleTween) { settleTween.kill(); settleTween = null; }
         pos = Math.max(0, Math.min(count - 1, p * (count - 1)));
         draw();
-        /* parado entre dois quadros, a cena assenta no mais próximo em vez de ficar com dupla exposição */
-        clearTimeout(idle);
+        /* Ao parar, deixa um quadro nítido. Uma nova rolagem cancela esse ajuste. */
         idle = setTimeout(() => {
-          if (!window.gsap || Math.abs(pos - Math.round(pos)) < 0.02) return;
+          if (destroyed || !window.gsap || Math.abs(pos - Math.round(pos)) < 0.002) return;
           settle.v = pos;
-          gsap.to(settle, { v: Math.round(pos), duration: 0.35, ease: 'power2.out', onUpdate: () => { pos = settle.v; draw(); } });
-        }, 140);
+          settleTween = gsap.to(settle, {
+            v: Math.round(pos), duration: 0.2, ease: 'power2.out',
+            onUpdate: () => {
+              if (destroyed || version !== seekVersion) return;
+              pos = settle.v;
+              draw();
+            },
+          });
+        }, 180);
       },
-      destroy() { window.removeEventListener('resize', resize); },
+      destroy() {
+        destroyed = true;
+        clearTimeout(idle);
+        if (settleTween) settleTween.kill();
+        if (raf) cancelAnimationFrame(raf);
+        window.removeEventListener('resize', resize);
+      },
     };
   }
 
@@ -255,13 +275,22 @@
       seqs.push(hero);
       hero.start();
 
-      const growScale = () => Math.max(window.innerWidth / heroScreen.offsetWidth, window.innerHeight / heroScreen.offsetHeight) * 1.002;
-      const growShift = () => window.innerHeight / 2 - (heroScreen.offsetTop + heroScreen.offsetHeight / 2);
+      /* No celular, ampliar pela altura corta a captura horizontal inteira. */
+      const growScale = () => desktop
+        ? Math.max(window.innerWidth / heroScreen.offsetWidth, window.innerHeight / heroScreen.offsetHeight) * 1.002
+        : window.innerWidth / heroScreen.offsetWidth;
+      const growShift = () => desktop ? window.innerHeight / 2 - (heroScreen.offsetTop + heroScreen.offsetHeight / 2) : 0;
       hero.setExtra(growScale());
 
       const lastFrame = 0.8; /* para antes da seção seguinte do site */
       const tl = gsap.timeline({
         defaults: { ease: 'none' },
+        onUpdate() {
+          const p = this.progress();
+          hero.seek(p * lastFrame);
+          /* O recorte acompanha o mesmo progresso suavizado que amplia a tela. */
+          if (!desktop) hero.setFocus(0.37 * gsap.parseEase('power2.inOut')(gsap.utils.clamp(0, 1, (p - 0.02) / 0.42)));
+        },
         scrollTrigger: {
           trigger: heroStage,
           start: 'top top',
@@ -270,25 +299,22 @@
           scrub: 1,
           invalidateOnRefresh: true,
           onRefresh: () => hero.setExtra(growScale()),
-          onUpdate: (st) => {
-            hero.seek(Math.min(st.progress / 0.8, 1) * lastFrame);
-            /* no celular o recorte começa à esquerda (título do site) e centraliza o copo ao crescer */
-            if (!desktop) hero.setFocus(0.37 * gsap.parseEase('power2.inOut')(gsap.utils.clamp(0, 1, (st.progress - 0.02) / 0.42)));
-          },
         },
       });
-      tl.to(heroCopy, { yPercent: -40, opacity: 0, duration: 0.16, ease: 'power2.in' }, 0)
-        .to([heroCaption, heroHint], { y: 24, opacity: 0, duration: 0.1 }, 0)
-        .to(heroScreen, {
+      if (desktop) {
+        tl.to(heroCopy, { yPercent: -40, opacity: 0, duration: 0.16, ease: 'power2.in' }, 0)
+          .to([heroCaption, heroHint], { y: 24, opacity: 0, duration: 0.1 }, 0)
+          .to(heroScreen, { '--bezel-o': 0, duration: 0.2 }, 0.02)
+          .fromTo(heroTag, { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.1, ease: 'power3.out' }, 0.62);
+      }
+      tl.to(heroScreen, {
           scale: growScale,
           y: growShift,
-          borderRadius: 0,
+          borderRadius: desktop ? 0 : 14,
           boxShadow: '0 0 0 0 rgba(0,0,0,0)',
           duration: 0.42,
           ease: 'power2.inOut',
         }, 0.02)
-        .to(heroScreen, { '--bezel-o': 0, duration: 0.2 }, 0.02)
-        .fromTo(heroTag, { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.1, ease: 'power3.out' }, 0.62)
         .to({}, { duration: 0.28 });
 
       /* Capítulos: a cena entra, assenta e a página pausa enquanto o site roda inteiro */
@@ -299,7 +325,7 @@
         const chapter = el.closest('.chapter');
         const stage = chapter || el.closest('.panel');
         const bar = stage.querySelector('.scene-progress span');
-        const play = 0.84; /* o resto do pin é um respiro no último quadro */
+        const playhead = { p: 0 };
 
         if (chapter) {
           gsap.timeline({
@@ -310,17 +336,19 @@
             .from(chapter.querySelector('.chapter-text'), { y: 40, opacity: 0, ease: 'power2.out' }, 0.35);
         }
 
-        ScrollTrigger.create({
-          trigger: stage,
-          start: chapter ? 'top top' : 'center center',
-          end: chapter ? (desktop ? '+=170%' : '+=130%') : (desktop ? '+=110%' : '+=90%'),
-          pin: true,
-          scrub: 1,
-          anticipatePin: 1,
-          onUpdate: (st) => {
-            const p = Math.min(st.progress / play, 1);
-            seq.seek(p);
-            if (bar) bar.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+        gsap.to(playhead, {
+          p: 1, duration: 1, ease: 'none',
+          scrollTrigger: {
+            trigger: stage,
+            start: chapter ? 'top top' : 'center center',
+            end: chapter ? (desktop ? '+=170%' : '+=130%') : (desktop ? '+=110%' : '+=90%'),
+            pin: true,
+            scrub: 0.45,
+            anticipatePin: 1,
+          },
+          onUpdate: () => {
+            seq.seek(playhead.p);
+            if (bar) bar.style.transform = 'scaleX(' + playhead.p.toFixed(4) + ')';
           },
         });
       });

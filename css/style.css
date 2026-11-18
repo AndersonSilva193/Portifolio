@@ -234,6 +234,7 @@ button{font:inherit;color:inherit}
 @media (max-width:767px) and (prefers-reduced-motion:reduce){
   .hero-stage{height:auto;min-height:0;padding-bottom:48px}
   .hero-screen{margin-top:28px}
+  .chapter{min-height:0;padding:64px 0}
 }
 
 /* ---------- Capítulos ---------- */
@@ -256,7 +257,7 @@ button{font:inherit;color:inherit}
   will-change:transform;
 }
 .chapter-screen{
-  width:min(88%,1040px,calc((100svh - 470px) * 2.057));margin:clamp(-60px,-3vw,-22px) auto 0;
+  width:min(88%,1040px,calc((100svh - 440px) * 2.057));margin:clamp(-60px,-3vw,-22px) auto 0;
   aspect-ratio:1440/700;
   box-shadow:0 40px 70px -30px rgb(0 0 0 / .5),0 14px 28px -16px rgb(0 0 0 / .35);
 }
@@ -273,7 +274,7 @@ button{font:inherit;color:inherit}
 .chapter :focus-visible{outline-color:var(--fg)}
 
 .scene-progress{
-  width:min(88%,1040px,calc((100svh - 470px) * 2.057));height:2px;margin:18px auto 0;border-radius:2px;
+  width:min(88%,1040px,calc((100svh - 440px) * 2.057));height:2px;margin:18px auto 0;border-radius:2px;
   background:color-mix(in srgb,var(--fg,var(--ink)) 14%,transparent);overflow:hidden;
 }
 .scene-progress span{display:block;height:100%;background:var(--giant,var(--fg,var(--ink)));transform:scaleX(0);transform-origin:left}
@@ -373,8 +374,9 @@ html.lenis,html.lenis body{height:auto}
 @media (max-width:767px){
   :root{--bar-h:56px}
   .bar-links{display:none}
-  .brand{font-size:1.25rem}
-  .pill-sm{font-size:.88rem;padding:.7em 1em}
+  .bar-inner{gap:12px}
+  .brand{font-size:clamp(1rem,4.4vw,1.25rem);white-space:nowrap}
+  .pill-sm{font-size:clamp(.75rem,3.5vw,.88rem);padding:.7em 1em;min-height:44px;white-space:nowrap}
 
   .hero-stage{padding-top:calc(var(--bar-h) + 18px);padding-bottom:20px;min-height:560px}
   .hero h1{font-size:clamp(2.45rem,11.2vw,3.4rem);line-height:1.02}
